@@ -6,6 +6,7 @@ const DashboardTemplateWrapper = styled.section`
     margin: 0;
     display: flex;
 
+
     aside{
         width: 300px;
         height: 100%;
@@ -18,19 +19,29 @@ const DashboardTemplateWrapper = styled.section`
             width: 200px;
         }
 
+
+        
         .list-group{
             margin: 0;
             padding: 0;
             cursor: pointer;
             display: flex;
             gap: 8px;
-           
-
-             .active{
-                background-color: #ffe854 !important;
-            }
             
-            .list-group-item{
+            .active{
+                background-color: #ffe854 !important;
+                width: 100%;
+                height: 100%;
+                color: #3d3c39;
+                border-radius: 8px;
+
+                .svg-inline--fa{
+                    color: #367cf5 !important;
+                }
+            } 
+           
+                       
+            .list-group-item {
                 padding: 4px 8px;
                 display: flex;
                 gap: 4px;
@@ -40,8 +51,12 @@ const DashboardTemplateWrapper = styled.section`
                 border: none !important;
                 border-radius: 8px;
 
+           
+
+
+
                 .svg-inline--fa{
-                    font-size: 30px;
+                    font-size: 24px;
                     color: #78909c;
                 }
 
@@ -65,7 +80,39 @@ const DashboardTemplateWrapper = styled.section`
     .rightSide {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    height: 100vh;
+    width: 100%;
+
+    header{
+        .fa-circle-user{
+            font-size: 30px;
+        }
+    }
+    main {
+    flex: 1;  
+    overflow-y: auto;
+    padding: 1rem;
+
+    .nav-pills .nav-link.active {
+        background-color: #ffe854 !important;
+        color: #000 !important;
+        font-weight: bold;
+    }
+
+    a{
+        color: #000 !important;
+    }
+
+    button{
+        background-color: #ffe854 !important;
+        color: #000 !important;
+        font-weight: bold;
+        border: none;
+        padding: 8px 40px;
+    }
+
+    
+}
 }
 
 
