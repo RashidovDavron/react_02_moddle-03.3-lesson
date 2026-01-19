@@ -8,28 +8,29 @@ const DashboardTemplateWrapper = styled.section`
 
 
     aside{
-        width: 300px;
-        height: 100%;
+        min-width: 250px;
+        min-height: 100%;
         background-color: #fffced;
         height: 100vh;
         margin: 0;
         z-index: 10;
+        overflow: hidden;
 
         img{
             width: 200px;
         }
 
-
-        
         .list-group{
             margin: 0;
             padding: 0;
             cursor: pointer;
             display: flex;
-            gap: 8px;
+            gap: 4px;
             
             .active{
                 background-color: #ffe854 !important;
+                margin: 0;
+                padding: 0;
                 width: 100%;
                 height: 100%;
                 color: #3d3c39;
@@ -42,8 +43,10 @@ const DashboardTemplateWrapper = styled.section`
            
                        
             .list-group-item {
-                padding: 4px 8px;
+                padding: 8px 8px;
+                width: 100% !important;
                 display: flex;
+                flex-direction: row;
                 gap: 4px;
                 align-items: center;
                 color: #3d3c39;
@@ -51,23 +54,22 @@ const DashboardTemplateWrapper = styled.section`
                 border: none !important;
                 border-radius: 8px;
 
-           
-
-
-
                 .svg-inline--fa{
-                    font-size: 24px;
+                    font-size: px;
                     color: #78909c;
+                    padding-left: 8px;
                 }
 
                 a{
                     text-decoration: none;
                     color: #21211f;
                     font-family: Inter, sans-serif;
+                    width: 100%;
+                    height: 100%;
                 }
 
-                span{
-                    font-size: 10px;
+                p{
+                    font-size: 6px;
                     padding-bottom: 4px;
                     color: #5e6366;
                 }
@@ -89,33 +91,29 @@ const DashboardTemplateWrapper = styled.section`
         }
     }
     main {
-    flex: 1;  
-    overflow-y: auto;
-    padding: 1rem;
+        flex: 1;  
+        overflow-y: auto;
+        padding: 1rem;
 
-    .nav-pills .nav-link.active {
-        background-color: #ffe854 !important;
-        color: #000 !important;
-        font-weight: bold;
-    }
+            .nav-pills .nav-link.active {
+                background-color: #ffe854 !important;
+                color: #000 !important;
+                font-weight: bold;
+            }
 
-    a{
-        color: #000 !important;
-    }
+            a{
+                color: #000 !important;
+            }
 
-    button{
-        background-color: #ffe854 !important;
-        color: #000 !important;
-        font-weight: bold;
-        border: none;
-        padding: 8px 40px;
-    }
-
-    
+            button{
+                background-color: #ffe854 !important;
+                color: #000 !important;
+                font-weight: bold;
+                border: none;
+                padding: 8px 40px;
+            }
+        }   
 }
-}
-
-
 `;
 
 export default DashboardTemplateWrapper;

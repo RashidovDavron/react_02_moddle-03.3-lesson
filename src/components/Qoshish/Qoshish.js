@@ -14,14 +14,12 @@ export default function Qoshish() {
     const [dishImageURL, setDishImageURL] = useState('');
     const [dishImageFile, setDishImageFile] = useState(null);
 
-    // Kategoriya qo'shish
     const addCategory = () => {
         if (categoryName.trim() === '') return;
         setCategories([...categories, categoryName.trim()]);
         setCategoryName('');
     };
 
-    // Taom qo'shish
     const addDish = () => {
         if (!dishName || !dishCategory || !dishPrice || !dishDescription) return;
 
@@ -35,7 +33,6 @@ export default function Qoshish() {
 
         setDishes([...dishes, newDish]);
 
-        // formani tozalash
         setDishName('');
         setDishCategory('');
         setDishPrice('');
@@ -94,7 +91,6 @@ export default function Qoshish() {
                                 <h2>Taom qo'shish</h2>
                                 <Form>
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Rasm URL</Form.Label>
                                         <Form.Control
                                             type="text"
                                             placeholder="Rasm URL kiriting"
@@ -112,7 +108,6 @@ export default function Qoshish() {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Taom nomi</Form.Label>
                                         <Form.Control
                                             type="text"
                                             placeholder="Taom nomi"
@@ -122,7 +117,6 @@ export default function Qoshish() {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Tarifi</Form.Label>
                                         <Form.Control
                                             as="textarea"
                                             rows={3}
@@ -133,7 +127,6 @@ export default function Qoshish() {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Narxi</Form.Label>
                                         <Form.Control
                                             type="number"
                                             placeholder="Narxi"
@@ -143,7 +136,6 @@ export default function Qoshish() {
                                     </Form.Group>
 
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Kategoriya</Form.Label>
                                         <Form.Select
                                             value={dishCategory}
                                             onChange={(e) => setDishCategory(e.target.value)}
@@ -159,7 +151,6 @@ export default function Qoshish() {
                                 </Form>
                             </Tab.Pane>
 
-                            {/* Taomlar ro'yxati */}
                             <Tab.Pane eventKey="dishesList">
                                 <h2>Taomlar ro'yxati</h2>
                                 <Row className="g-3">
