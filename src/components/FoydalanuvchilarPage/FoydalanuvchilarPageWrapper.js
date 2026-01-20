@@ -5,17 +5,8 @@ const FoydalanuvchilarPagePageWrapper = styled.div`
     height: 100%;
 
     .svg-inline--fa{
-        font-size: 20px;
+        font-size: 18px;
     }
-
-    .fa-pen-clip{
-        color: gray;
-    }
-
-    .fa-trash{
-        color: red;
-    }
-
 `;
 
 
