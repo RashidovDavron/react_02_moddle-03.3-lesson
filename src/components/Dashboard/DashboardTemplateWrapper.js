@@ -8,7 +8,7 @@ const DashboardTemplateWrapper = styled.section`
 
 
     aside{
-        min-width: 250px;
+        min-width: 400px;
         min-height: 100%;
         background-color: #fffced;
         height: 100vh;
@@ -17,7 +17,8 @@ const DashboardTemplateWrapper = styled.section`
         overflow: hidden;
 
         img{
-            width: 200px;
+            width: 300px;
+            text-align: center;
         }
 
         .list-group{
@@ -30,7 +31,6 @@ const DashboardTemplateWrapper = styled.section`
             .active{
                 background-color: #ffe854 !important;
                 margin: 0;
-                padding: 0;
                 width: 100%;
                 height: 100%;
                 color: #3d3c39;
@@ -55,22 +55,24 @@ const DashboardTemplateWrapper = styled.section`
                 border-radius: 8px;
 
                 .svg-inline--fa{
-                    font-size: px;
+                    font-size: 34px;
                     color: #78909c;
                     padding-left: 8px;
                 }
 
                 a{
                     text-decoration: none;
+                    font-size: 18px;
                     color: #21211f;
                     font-family: Inter, sans-serif;
                     width: 100%;
                     height: 100%;
+                    font-weight: 400;
+                    padding: 0;
                 }
 
-                p{
-                    font-size: 6px;
-                    padding-bottom: 4px;
+                small{
+                    font-size: 11px;
                     color: #5e6366;
                 }
 

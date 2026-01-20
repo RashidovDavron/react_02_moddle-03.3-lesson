@@ -6,11 +6,14 @@ import './App.css';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import DashboardTemplate from './components/Dashboard/Dashboard';
 import Qoshish from './components/Qoshish/Qoshish';
-import { Arizalar, Yetkazilganlar, Statistika, Foydalanuvchilar } from './components/Qoshish/OthersComponents/OthersComponents';
 import { createContext, useState } from 'react';
 import HomePage from './components/HomePage/HomePage';
 import LoginPage from './components/LoginPage/LoginPage';
 import Page404 from './components/404Page/Page404';
+import ArizalarPage from './components/ArizalarPage/ArizalarPage';
+import YetkazilganlarPage from './components/YetkazilganlarPage/YetkazilganlarPage';
+import StatistikaPage from './components/StatistikaPage/StatistikaPage';
+import FoydalanuvchilarPage from './components/FoydalanuvchilarPage/FoydalanuvchilarPage';
 
 const LoginContext = createContext({ isLogin: false, setLogin: () => { } });
 
@@ -28,12 +31,15 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/login' element={<LoginPage />} />
           {isLogin &&
+
             <Route path='dashboard/' element={<DashboardTemplate />} >
-              <Route path="arizalar" element={<Arizalar />} />
-              <Route path="yetkazilganlar" element={<Yetkazilganlar />} />
-              <Route path="statistika" element={<Statistika />} />
+              <Route index element={<h2 className='text-center'>“Xush kelibsiz, Admin paneliga!”</h2>}
+              />
+              <Route path="arizalar" element={<ArizalarPage />} />
+              <Route path="yetkazilganlar" element={<YetkazilganlarPage />} />
+              <Route path="statistika" element={<StatistikaPage />} />
               <Route path="qoshish" element={<Qoshish />} />
-              <Route path="foydalanuvchilar" element={<Foydalanuvchilar />} />
+              <Route path="foydalanuvchilar" element={<FoydalanuvchilarPage />} />
             </Route>
           }
 
